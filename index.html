@@ -1,11 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8" />
   <title>Happy Birthday 🎉</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/style.css" />
 </head>
 <body>
-<h1>🎂 Happy Birthday!</h1>
-<button onclick="alert('🎉 Surprise! May your year be epic.')">
-  Tap for surprise 🎁
-</button>
+  <h1>🎂 Happy Birthday!</h1>
+  <p>May your year be full of wins.</p>
+
+  <button id="btn">Tap for surprise 🎁</button>
+
+  <!-- Load script safely -->
+  <script src="/script.js"></script>
+  <script>
+    // Fallback in case script loads late
+    document.getElementById("btn").addEventListener("click", function () {
+      if (typeof play === "function") {
+        play();
+      } else {
+        alert("🎉 Surprise! Reload the page once more.");
+      }
+    });
+  </script>
+</body>
+</html>
