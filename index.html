@@ -7,8 +7,9 @@
 <body>
   <h1>🎂 Happy Birthday!</h1>
   <p>May your year be full of wins.</p>
-  <button onclick="play()">Tap for surprise 🎁</button>
+  <button id="btn">Tap for surprise 🎁</button>
 
-  <script src="script.js"></script>
-</body>
-</html>
+<script src="script.js"></script>
+<script>
+  document.getElementById("btn").addEventListener("click", play);
+</script>
